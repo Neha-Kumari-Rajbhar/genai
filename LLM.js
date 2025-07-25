@@ -56,8 +56,6 @@ import readlineSync from 'readline-sync';
 
 const ai = new GoogleGenAI({ apiKey: "AIzaSyBSktc9PZuOiZ1dE61UX9rtLpamriJ1ZrE" });
 
-const History=[]
-
 const chat = ai.chats.create({
     model: "gemini-2.5-flash",
     history: [],
