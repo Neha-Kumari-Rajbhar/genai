@@ -1,8 +1,10 @@
 /*for one line context
 
 import { GoogleGenAI } from "@google/genai";
+import dotenv from 'dotenv'
+dotenv.config()
 
-const ai = new GoogleGenAI({ apiKey: "AIzaSyBSktc9PZuOiZ1dE61UX9rtLpamriJ1ZrE" });
+const ai = new GoogleGenAI({ apiKey: process.env.GEMINIKEY});
 
 async function main() {
   const response = await ai.models.generateContent({
@@ -19,8 +21,10 @@ main();
 //maintain a whole chat as context
 import { GoogleGenAI } from "@google/genai";
 import readlineSync from 'readline-sync';
+import dotenv from 'dotenv'
+dotenv.config()
 
-const ai = new GoogleGenAI({ apiKey: "AIzaSyBSktc9PZuOiZ1dE61UX9rtLpamriJ1ZrE" });
+const ai = new GoogleGenAI({ apiKey: process.env.GEMINIKEY });
 
 const History=[]
 
@@ -53,8 +57,10 @@ main();
 
 import { GoogleGenAI } from "@google/genai";
 import readlineSync from 'readline-sync';
+import dotenv from "dotenv";
+dotenv.config()
 
-const ai = new GoogleGenAI({ apiKey: "AIzaSyBSktc9PZuOiZ1dE61UX9rtLpamriJ1ZrE" });
+const ai = new GoogleGenAI({ apiKey: process.env.GEMINIKEY});
 
 const chat = ai.chats.create({
     model: "gemini-2.5-flash",
