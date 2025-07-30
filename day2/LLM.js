@@ -69,7 +69,7 @@ const chat = ai.chats.create({
 
 async function main() {
     const userProblem = readlineSync.question('Asked me anything-----> ');
-     const response = await chat.sendMessage({message:userProblem});
+    const response = await chat.sendMessage({message:userProblem});
     console.log(response.text);
     main();
 }
