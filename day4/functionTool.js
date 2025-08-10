@@ -173,7 +173,8 @@ async function aiAgent(userProblem) {
   you can give the answer directly by own
 
   `,
-      tools },
+      tools 
+    },
   });
 
   //check is function call or not if not then print direct result
@@ -212,6 +213,11 @@ async function aiAgent(userProblem) {
     })
 
   }else{
+    
+    History.push({
+        role:'model',
+        parts:[{text:response.text}]
+    })
     console.log(response.text)
     break;
   }
